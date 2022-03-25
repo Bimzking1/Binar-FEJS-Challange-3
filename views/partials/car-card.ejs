@@ -1,0 +1,57 @@
+<div class="col-xs-12 col-lg-4 col-sm-2 car-card">
+    <% cars.forEach(function(car) { %>
+    <div class="row-6 car-image">
+        <img src="/img/car.svg" alt="Car">
+    </div>
+    <div class="row-6 car-details">
+        <div class="car-title">
+            Nama/Tipe Mobil
+        </div>
+        <div class="car-price">
+            Rp. <%= car.price %> / hari
+        </div>
+        <div class="car-rules">
+            <i class='bi bi-key' ></i>
+            Start rent - Finish rent
+        </div>
+        <div class="car-status">
+            <i class='bx bx-time' ></i>
+            Updated at <%= car.updated %>
+        </div>
+        <div class="car-buttons">
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn button-car-categories-delete" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Delete
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade modal-container-else" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content modal-alert-container">
+                    <div class="modal-body">
+                        <div class="row-6 -modal-car-image">
+                            <img src="/img/car-alert.svg" alt="Car">
+                        </div>
+                        <div class="row-6 modal-car-title">
+                            Menghapus Data Mobil
+                        </div>
+                        <div class="row-6 modal-car-text">
+                            Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin menghapus?
+                        </div>
+                    </div>
+                    <div class="modal-button-container">
+                        <button type="button" class="btn modal-button-cancel">Ya</button>
+                        <button type="button" class="btn modal-button-save" data-bs-dismiss="modal">Tidak</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn button-car-categories-edit">
+                Edit
+            </button>
+        </div>
+    </div>
+    <% }); %>
+</div>

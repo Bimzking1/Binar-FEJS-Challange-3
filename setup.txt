@@ -1,0 +1,25 @@
+Langkah2 setup environment EJS
+
+1. npm i ejs
+2. npm i express
+3. npm i express-ejs-layouts
+4. npm i nodemon
+5. npm i eslint
+
+npm init @eslint/config
+
+- problems
+- commonjs
+- nodemon
+- none
+- browser
+- json
+- yes/no: yes
+
+tambahkan: di package.json
+    
+    "scripts":{
+        "dev": "nodemon index"
+    },
+
+    supaya saat start hanya ketik: "npm run dev"

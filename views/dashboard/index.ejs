@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('../partials/head-links') %>
+
+	<!-- CSS File -->
+	<link href="/css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header id="header" class="header fixed-top d-flex align-items-center">
+		<%- include('../partials/main-header') %>
+	</header>
+
+	<!-- Sidebar -->
+	<div id="sidebar" class="sidebar">
+		<%- include('../partials/sidebar', { 
+			thisLayout: 'DASHBOARD', thisContent: 'Dashboard' 
+		}) %>
+	</div>
+
+	<main id="main" class="main">
+		<div class="pagetitle">
+			<nav>
+				<ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+				<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+				<li class="breadcrumb-item active">Dashboard</li>
+				</ol>
+			</nav>
+			<h1>Dashboard</h1>
+			<%- include('../partials/table-title', {
+				thisTitle: 'List Order'
+			}) %>
+			<div class="table-container">
+				<table class="table">
+					<thead>
+						<tr class="table-title-row">
+							<th scope="col">No</th>
+							<th scope="col">User Email</th>
+							<th scope="col">Car</th>
+							<th scope="col">Start Rent</th>
+							<th scope="col">Finish Rent</th>
+							<th scope="col">Price</th>
+							<th scope="col">Status</th>
+						</tr>
+					</thead>
+					<tbody class="table-body-row">
+						<%- include('../partials/table-user') %>
+					</tbody>
+				</table>
+				<div class="table-navigation">
+					<%- include('../partials/table-navigation') %>
+				</div>
+			</div>
+			<%- include('../partials/table-title', { 
+				thisTitle: 'List Car'
+			}) %>
+			<div class="table-container">
+				<table class="table">
+					<thead>
+					<tr class="table-title-row">
+						<th scope="col">No</th>
+						<th scope="col">Name</th>
+						<th scope="col">Category</th>
+						<th scope="col">Price</th>
+						<th scope="col">Start Rent</th>
+						<th scope="col">Finish Rent</th>
+						<th scope="col">Created at</th>
+						<th scope="col">Uploaded at</th>
+					</tr>
+					</thead>
+					<tbody class="table-body-row">
+						<%- include('../partials/table-car-rent') %>
+					</tbody>
+				</table>
+				<div class="table-navigation">
+					<%- include('../partials/table-navigation') %>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Untuk offcanvas -->
+	<script src="/js/main.js"></script>
+
+</body>
+</html>

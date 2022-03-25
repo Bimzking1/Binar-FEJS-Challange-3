@@ -1,0 +1,48 @@
+<div class="d-flex align-items-center justify-content-between">
+    <div class="blue-box">
+        <div class="light-box"></div>
+    </div>
+    <a href="/dashboard" class="logo d-flex align-items-center"></a>
+    <i class="bi bi-list toggle-sidebar-btn"></i>
+</div>
+
+<nav class="header-nav ms-auto">
+    <ul class="d-flex align-items-center">
+        <div class="search-bar d-flex align-items-center">
+        <form class="search-form d-flex align-items-center" action="#">
+            <i class="bi bi-search search-icon d-flex justify-content-center align-items-center"></i>
+            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+            <button class="nav-search" type="submit" title="Search">Search</button>
+        </form>
+        </div>
+
+        <li class="nav-item dropdown pe-3">
+
+        <a class="nav-link nav-profile d-flex align-items-center" href="#" data-bs-toggle="dropdown">
+            <div class="nav-profile-photo">U</div>
+            <div class="name-profile">
+                Unis Badri
+                <i class='bi bi-chevron-down' ></i>
+            </div>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+                <h6>Unis Badri</h6>
+            </li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li>
+                <form action="/logout" class="dropdown-item d-flex align-items-center" method="POST">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <button class="navbar-button-logout" type="submit">Logout</button>
+                </form>
+            </li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+        </ul>
+        </li>
+    </ul>
+</nav>

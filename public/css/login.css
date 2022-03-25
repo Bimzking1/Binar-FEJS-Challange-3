@@ -1,0 +1,78 @@
+html * {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 12pt;
+}
+
+:root {
+    --primary-blue: #0D28A6;
+    --blue-grey: #CFD4ED
+}
+
+.container-fluid{
+    background-color: var(--primary-blue);
+    height: 100vh;
+}
+
+.column-left{
+    height: 100vh;
+    background: url("../img/loginback.svg");
+    background-size: cover;
+    opacity: 70%;
+    background-position-x: right;
+}
+
+.column-right{
+    height: 100vh;
+    background-color: white;
+}
+
+.column-right-inner{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+/* Forms */
+
+.grey-box{
+    background-color: var(--blue-grey);
+    width: 80px;
+    height: 30px;
+}
+
+.login-title{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0px;
+}
+
+.button-signin{
+    background-color: var(--primary-blue);
+    color: white;
+    width: 100%;
+}
+
+.form-group{
+    margin-bottom: 25px;
+}
+
+/* Forms End */
+
+@media screen and (min-width: 576px){
+    .column-right-inner{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .column-left{
+        height: 40vh;
+        background-position-y: center;
+    }
+    
+    .column-right-inner{
+        margin-top: 35px;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('../partials/head-links') %>
+
+	<!-- CSS File -->
+	<link href="/css/cars.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header id="header" class="header fixed-top d-flex align-items-center">
+		<%- include('../partials/main-header') %>
+	</header>
+
+	<!-- Sidebar -->
+	<div id="sidebar" class="sidebar">
+		<%- include('../partials/sidebar', { 
+			thisLayout: 'CARS', thisContent: 'List Car' 
+		}) %>
+	</div>
+
+	<main id="main" class="main">
+		<div class="pagetitle">
+			<nav>
+				<ol class="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+				<li class="breadcrumb-item"><a href="index.html">Car</a></li>
+				<li class="breadcrumb-item active">List Car</li>
+				</ol>
+			</nav>
+			<div class="title-and-button">
+				<div>
+					<h1>List Car</h1>
+				</div>
+				<div>
+					<a href="/car/addnewcar" >
+						<button type="button" class="btn button-add-car">
+							<i class='bi bi-plus boxicon-plus'></i>
+							Add New Car
+						</button>
+					</a>
+				</div>
+			</div>
+
+			<div class="categories-container">
+				<div class="categories">
+					<button type="button" class="btn button-categories">
+						All
+					</button>
+				</div>
+				<div class="categories">
+					<button type="button" class="btn button-categories">
+						Small
+					</button>
+				</div>
+				<div class="categories">
+					<button type="button" class="btn button-categories">
+						Medium
+					</button>
+				</div>
+				<div class="categories">
+					<button type="button" class="btn button-categories">
+						Large
+					</button>
+				</div>
+			</div>
+			
+			<div class='container-fluid'>
+				<div class="row">
+					<div class="row car-card-container">
+						<% for (let i = 0; i < total; i++) { %>
+							<%- include('../partials/car-card') %>
+						<% }; %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Untuk offcanvas -->
+	<script src="/js/main.js"></script>
+
+</body>
+</html>
