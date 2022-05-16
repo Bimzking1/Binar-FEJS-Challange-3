@@ -1,4 +1,4 @@
-# Binar-FEJS-Challange-3
+# Binar-FEJS-Challenge-3
 Repo untuk challenge Binar-FEJS chapter 3.
 
 Challenge ini sudah menggunakan:
